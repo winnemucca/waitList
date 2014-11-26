@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 18px;
+}
+
+header {
+	text-align: center;
+	font-size: 30px;
+}
+
+.input {
+	float: left;
+	width: 50%;
+	background-color: green;
+	margin: 0 2.5%;
+	border: 2px solid black;
+	text-align: right;
+}
+
+.output {
+	float: right;
+	width: 35%;
+	background-color: blue;
+	margin: 0 2.5%;
+	/*border: 2px solid black;*/
+}
+
+/* *****************************clear fix  error**********************/
+/*.container: before,
+.container: after {
+	content: "";
+	display: table;
+}
+.group: after{
+	clear: both;
+
+}
+.group {
+	clear: both;
+	zoom: 1;
+}*/
+
+footer {
+	clear: both;
+	background-color: yellow;
+}
+
+
+.mealCost {
+	margin: 10px auto;
+
+}
+
+.mealCost th{
+	font-weight: bold;
+	font-size:  25px;
+	border-bottom: 1px solid;
+}
+
+td{
+	padding: 5px;
+
+}
+.title {
+	border-bottom: 2px solid;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+
+}
+.userResponse {
+	margin: 100px auto;
+	text-align: center;
+	border: none;
+}
+
+.overall {
+	border: 1px solid;
+}
+
+
+
+
+

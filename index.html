@@ -24,18 +24,18 @@
 			<!-- descriptions -->
 			<tr> 
 				<td> Base Meal Price: </td>
-				<td><input type="number" name="price" ng-model="mealPrice" required></td>
+				<td><input type="number" name="price" ng-model="user.mealPrice" required></td>
 			</tr>
 			<!-- waiter puts in the info -->
 			<tr> 
 				<td> Tax Rate: % </td>
-				<td><input type="number" step="0.01" name="tax" ng-model="mealTax" required></td>
+				<td><input type="number" step="0.01" name="tax" ng-model="user.mealTax" required></td>
 
 			</tr>
 
 			<tr> 
 				<td> Tip Percentage: % </td>
-				<td><input type="number"  name="tip" step="0.01" ng-model="tipPercent" required></td>
+				<td><input type="number"  name="tip" step="0.01" ng-model="user.tipPercent" required></td>
 
 			</tr>
 
@@ -88,7 +88,7 @@
 			<table>
 				<tr> 
 					<td> Tip Total: </td>
-					<td> <span> 0:00</span></td>
+					<td> <span>{{}} </span></td>
 				</tr>
 				<tr> 
 					<td> Meal Count </td>

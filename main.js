@@ -1,15 +1,14 @@
 var app = angular.module('myApp',[]).
 		controller('costController', function($scope) {
-			// $scope.ready= false;
-			$scope.mealPrice ="" ;
-			$scope.mealTax = 0.05;
-			$scope.tipPercent =0.05; 
+			// $scope.mealPrice ="" ;
+			// $scope.mealTax = 0.05;
+			// $scope.tipPercent =0.05; 
 			//  possibly could do 
 
 			var defaultForm={
-				price: "",
-				tax: "",
-				tip:""
+				mealPrice: "",
+				mealTax: "",
+				tipPercent:""
 			}
 
 			$scope.user = angular.copy(defaultForm);
@@ -48,11 +47,15 @@ var app = angular.module('myApp',[]).
 
 			$scope.cancel = function() {
 				$scope.myForm.$setPristine();
-				// $scope.user = angular.copy(defaultForm);
-				$scope.mealPrice ="";
-				$scope.mealTax = 0.05;
-				$scope.tipPercent = 0.05;
+				$scope.user = angular.copy(defaultForm);
+				// $scope.mealPrice ="";
+				// $scope.mealTax = 0.05;
+				// $scope.tipPercent = 0.05;
 				console.log('empty');
+			}
+
+			$scope.calculateEarnings = function(){
+
 			}
 
 

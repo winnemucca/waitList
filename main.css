@@ -44,7 +44,7 @@ header {
 
 footer {
 	clear: both;
-	background-color: yellow;
+	/*background-color: yellow;*/
 }
 
 
@@ -78,8 +78,15 @@ td{
 
 .overall {
 	border: 1px solid;
+	margin: 10px auto;
 }
 
+.reset {
+	float: right;
+	border: none;
+	margin-right: 2%;
+	font-size: 24px;
+}
 
 
 

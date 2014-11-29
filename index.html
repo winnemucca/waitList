@@ -42,9 +42,9 @@
 		</table>
 
 		<p class="userResponse"> 
-		<input type="submit" value="Submit"> 
+		<input type="submit" value="Submit" > 
 		<!-- <input id="cancel" type="submit" value="Cancel" ng-submit="cancel(original)"> -->
-		<button ng-click="cancel(user)">Start Over</button>
+		<button ng-click="cancel()">Start Over</button>
 		</p>
 
 	</form>
@@ -62,21 +62,21 @@
 				<tr> 
 				<!-- add base meal price + (base meal price * tax rate) -->
 					<td> Subtotal: </td>
-					<td>  <span>{{subtotal() | currency}} </span>
+					<td>  <span ng-if="myForm.$submitted">{{subtotal() | currency}} </span>
 
 					</td>
 				</tr>
 				<tr> 
 				<!-- subtotal * tax rate -->
 					<td> Tip: </td>
-					<td> <span>{{tip() | currency}} </span></td>
+					<td> <span ng-if="myForm.$submitted">{{tip() | currency}} </span></td>
 
 				</tr>
 
 				<tr> 
 				<!-- total = tip + subtotal -->
 					<td> Total  </td>
-					<td><span>{{total() | currency}} </span></td>
+					<td><span ng-if="myForm.$submitted">{{total() | currency}} </span></td>
 
 				</tr>
 			</table>
@@ -88,17 +88,17 @@
 			<table>
 				<tr> 
 					<td> Tip Total: </td>
-					<td> <span>{{}} </span></td>
+					<td> <span>{{tipTotal | currency}} </span></td>
 				</tr>
 				<tr> 
 					<td> Meal Count </td>
-					<td> <span>0 </span></td>
+					<td> <span>{{mealCount |number}} </span></td>
 
 				</tr>
 
 				<tr> 
 					<td> Average Tip Per Meal:  </td>
-					<td><span> 0:00</span></td>
+					<td><span>{{averageTip | currency}} </span></td>
 
 				</tr>
 			</table>
@@ -108,7 +108,8 @@
 	</section>
 
 	<footer>
-		Here is my footer
+		<button class="reset" ng-click="reset()">Reset</button>
+		<pre>{{myForm |json}} </pre>
 	</footer>
 </div>
 
